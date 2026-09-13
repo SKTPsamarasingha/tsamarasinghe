@@ -27,7 +27,7 @@ const NavBar = () => {
             {/* Horizontal Progress Bar Track */}
             <div className="flex-1 h-[1px] bg-black rounded-full overflow-hidden min-w-[30px] md:min-w-[50px]">
                 <div
-                    className="h-full bg-green transition-all duration-75 ease-out origin-left"
+                    className="h-full bg-lightgrey transition-all duration-75 ease-out origin-left"
                     style={{width: `${scrollProgress}%`}}
                 ></div>
             </div>

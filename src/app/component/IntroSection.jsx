@@ -1,8 +1,10 @@
 'use client';
-import {useEffect, useRef} from 'react';
+import {useRef} from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
-import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+import {useGSAP} from '@gsap/react';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import profileImg from '@/../public/profile.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,8 +14,9 @@ export default function IntroSection() {
 
     const bioText = "I help startups and enterprises create meaningful connections between their products and customers. With a focus on ethical practices, I streamline publishing workflows and empower businesses to achieve their goals while fostering lasting customer engagement.";
     const words = bioText.split(' ');
+    const imageSrc = profileImg; // or "/profile.jpg" if placed in public folder
 
-    useEffect(() => {
+    useGSAP(() => {
         const container = containerRef.current;
         if (!container) return;
 
@@ -37,10 +40,10 @@ export default function IntroSection() {
         });
 
         return () => {
+            tl.scrollTrigger?.kill();
             tl.kill();
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
-    }, []);
+    }, {scope: sectionRef});
 
     const handleMouseEnter = (e) => {
         const textEl = e.currentTarget.querySelector(".spin-text");
@@ -79,16 +82,25 @@ export default function IntroSection() {
                     </p>
                 </div>
 
-                {/* Right Side: Moody Portrait Image */}
+                {/* Right Side: Moody Portrait Image (Hidden on Mobile) */}
                 <div
-                    className="lg:col-span-5 relative w-full h-[350px] md:h-[480px] rounded-2xl overflow-hidden grayscale contrast-125">
-                    <Image src="/portrait.jpg" alt="Profile Portrait" fill className="object-cover object-top"
-                           priority/>
+                    className="hidden lg:block lg:col-span-5 relative w-full h-[600px] rounded-2xl overflow-hidden contrast-125">
+                    {imageSrc ? (
+                        <Image
+                            src={imageSrc}
+                            alt="Thiruna Samarasinghe portrait"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 40vw"
+                            className="object-cover object-center"
+                            priority
+                        />
+                    ) : null}
                 </div>
+
             </div>
 
             {/* Bottom Action Links with Vertical Spin Hover Effect */}
-            <div className="w-full pt-12 flex items-center gap-8 font-mono text-xs">
+            <div className="w-full  flex items-center gap-8 font-mono text-xs">
                 <a
                     href="#contact"
                     onMouseEnter={handleMouseEnter}

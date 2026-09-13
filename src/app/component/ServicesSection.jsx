@@ -52,7 +52,7 @@ export default function ServicesSection() {
 
         const initAnimation = () => {
             const getScrollAmount = () => {
-                return -(track.scrollWidth - window.innerWidth + 64);
+                return -(track.scrollWidth - window.innerWidth + 120);
             };
 
             tween = gsap.to(track, {
@@ -97,7 +97,7 @@ export default function ServicesSection() {
     return (
         <section
             ref={sectionRef}
-            className="w-full h-screen px-4 sm:px-6 md:px-16 py-16 md:py-24 bg-[#0f0f0f] text-[#f5f5f5] overflow-hidden flex flex-col justify-center relative"
+            className="w-full h-screen px-4 sm:px-6 md:px-16 py-16 md:py-24 bg-black text-[#f5f5f5] overflow-hidden flex flex-col justify-center relative"
         >
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 md:mb-12">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight">

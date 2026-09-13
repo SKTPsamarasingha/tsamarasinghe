@@ -78,7 +78,7 @@ export default function AboutSection() {
     return (
         <section
             ref={sectionRef}
-            className="w-full px-6 md:px-16 py-24 bg-[#0f0f0f] text-[#f5f5f5] flex flex-col justify-center"
+            className="w-full px-6 md:px-16 py-24 bg-black text-[#f5f5f5] flex flex-col justify-center"
         >
             <div className="w-full max-w-7xl mx-auto flex flex-col">
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-16">

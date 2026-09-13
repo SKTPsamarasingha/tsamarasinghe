@@ -17,39 +17,33 @@ const projects = [{
     title: "Locks & Cos",
     year: "'26",
     tags: ["FULL-STACK", "BOOKING", "DEV"],
-    image: "/projects/Locks & Cos.png",
+    image: "/projects/Locks&Cos.png",
     link: "https://salon-booking-brown.vercel.app/"
 }, {
     title: "Velevt Pour",
-    year: "'26",
+    year: "'25",
     tags: ["E-COMMERCE", "DEV", "UI"],
     image: "/projects/velevt-pour.png",
     link: "https://velevt-pour.vercel.app/"
 }, {
     title: "Anera Foods",
-    year: "'26",
+    year: "'2024",
     tags: ["E-COMMERCE", "DEV", "UI"],
     image: "/projects/anera-foods.png",
     link: "https://anera-foods.vercel.app/"
 }, {
     title: "Dilru Crochet",
-    year: "'26",
+    year: "'2024",
     tags: ["E-COMMERCE", "DEV", "UI"],
     image: "/projects/dilru-crochet.png",
     link: "https://dilru-crochet.vercel.app/"
-}, {
-    title: "Gym Landing Page",
-    year: "'26",
-    tags: ["DESIGN", "DEV", "UI"],
-    image: "/projects/rpstrenght.png",
-    link: "https://gym-landing-page-umber.vercel.app/"
 }];
-const cardBackgrounds = ["bg-[#121212]", // Card 1: Very Dark Charcoal
-    "bg-[#202020]", // Card 2: Dark Grey
-    "bg-[#323232]", // Card 3: Medium-Dark Grey
-    "bg-[#444444]", // Card 4: Light-Medium Grey (Noticeably Lighter)
+const cardBackgrounds = ['bg-[#121212]', // Card 1: Deep Dark Charcoal
+    'bg-[#222222]', // Card 2: Neutral Dark Grey
+    'bg-[#363636]', // Card 3: Medium-Dark Grey
+    'bg-[#525252]', // Card 4: True Medium Grey
+    'bg-[#737373]', // Card 5: Soft Slate Grey
 ];
-
 export default function WorkSection() {
     const containerRef = useRef(null);
     const cardsRef = useRef([]);
@@ -77,13 +71,13 @@ export default function WorkSection() {
 
         {/* Section Title */}
         <div className="mb-12">
-            <h2 className="text-xs font-mono text-[#8c8c8c] tracking-widest uppercase">
+            <h2 className="text-lg font-mono text-white tracking-widest uppercase">
                 Selected Work
             </h2>
         </div>
 
         {/* Projects List */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col ">
             {projects.map((project, index) => (<a
                 key={index}
                 href={project.link}
@@ -92,7 +86,7 @@ export default function WorkSection() {
                     position: 'sticky', // Staggered top threshold height so previous cards keep their tabs visible
                     top: `${96 + (index * 24)}px`, zIndex: index + 1,
                 }}
-                className={`group relative flex flex-col md:flex-row items-start md:items-center justify-between py-14 border-b border-[#2e2e2e] transition-colors px-4 rounded-xl ${cardBackgrounds[index] || "bg-[#1c1c1c]"} hover:bg-[#262626]`}
+                className={`group relative flex flex-col md:flex-row items-start md:items-center justify-between py-14 border-b border-[#2e2e2e] transition-colors px-4 ${cardBackgrounds[index] || "bg-[#1c1c1c]"} hover:bg-[#262626]`}
             >
                 {/* Left side: Title and Tags */}
                 <div className="flex flex-col gap-3 w-full md:w-auto flex-1">
@@ -101,10 +95,10 @@ export default function WorkSection() {
                     </h3>
 
                     {/* Tags Under Title */}
-                    <div className="flex items-center gap-2 font-mono text-[10px] text-[#8c8c8c]  w-[14rem]">
+                    <div className="flex items-center gap-2 font-mono text-[10px] text-white  w-[14rem]">
                         {projects[index].tags.map((tag, tagIndex) => (<span
                             key={tagIndex}
-                            className="px-2 py-1 rounded  text-lightgrey tracking-wider"
+                            className="px-2 py-1 rounded  text-white tracking-wider"
                         >
                                         {tag}
                                     </span>))}
@@ -117,7 +111,7 @@ export default function WorkSection() {
 
                     {/* Horizontal line running from left elements to the image, with year sitting right on top */}
                     <div className="flex flex-col items-end relative  w-200 mx-6">
-                                <span className="font-mono text-xs text-lightgrey mb-1">
+                               <span className="font-mono text-2xl sm:text-6xl text-white mb-1">
                                     {project.year}
                                 </span>
                         <div className="w-full h-[1px] bg-lightgrey"/>
@@ -125,7 +119,7 @@ export default function WorkSection() {
 
                     {/* Large Project Image Thumbnail with Slow Color Transition on Hover */}
                     <div
-                        className="relative w-70 h-55 hidden md:block overflow-hidden shrink-0 shadow-lg mr-10">
+                        className="relative w-80 h-65 hidden md:block overflow-hidden shrink-0 shadow-lg mr-10">
                         <Image
                             src={project.image}
                             alt={project.title}

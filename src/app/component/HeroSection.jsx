@@ -100,7 +100,7 @@ export default function HeroSection() {
 
             {/* Bottom Section: Segmented Layout */}
             <div ref={bottomSectionRef} className="w-full opacity-0">
-                <div className="flex items-center justify-between font-mono text-xs text-gray-400 gap-4">
+                <div className="flex items-center justify-between font-mono text-xs text-gray-400 gap-2">
                     {/* Item 1: Location */}
                     <span className="shrink-0">Colombo, LK</span>
 
