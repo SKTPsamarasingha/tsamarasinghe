@@ -16,7 +16,7 @@ const projects = [{
 }, {
         title: "WildRoute",
         year: "'26",
-        tags: ["TRAVEL", "E-COMMERCE", "BOOKING", "DEV"],
+        tags: ["E-COMMERCE", "BOOKING", "DEV"],
         image: "/projects/wildroute.png",
         link: "https://wildroute-bice.vercel.app/"
     }, {
