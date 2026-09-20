@@ -14,30 +14,36 @@ const projects = [{
     image: "/projects/luzifer.png",
     link: "https://luzifer-clothing.vercel.app/"
 }, {
-    title: "Locks & Cos",
-    year: "'26",
-    tags: ["FULL-STACK", "BOOKING", "DEV"],
-    image: "/projects/Locks&Cos.png",
-    link: "https://salon-booking-brown.vercel.app/"
-}, {
-    title: "Velevt Pour",
-    year: "'25",
-    tags: ["E-COMMERCE", "DEV", "UI"],
-    image: "/projects/velevt-pour.png",
-    link: "https://velevt-pour.vercel.app/"
-}, {
-    title: "Anera Foods",
-    year: "'2024",
-    tags: ["E-COMMERCE", "DEV", "UI"],
-    image: "/projects/anera-foods.png",
-    link: "https://anera-foods.vercel.app/"
-}, {
-    title: "Dilru Crochet",
-    year: "'2024",
-    tags: ["E-COMMERCE", "DEV", "UI"],
-    image: "/projects/dilru-crochet.png",
-    link: "https://dilru-crochet.vercel.app/"
-}];
+        title: "WildRoute",
+        year: "'26",
+        tags: ["TRAVEL", "E-COMMERCE", "BOOKING", "DEV"],
+        image: "/projects/wildroute.png",
+        link: "https://wildroute-bice.vercel.app/"
+    }, {
+        title: "Locks & Cos",
+        year: "'26",
+        tags: ["FRONTEND", "BOOKING", "DEV"],
+        image: "/projects/Locks&Cos.png",
+        link: "https://salon-booking-brown.vercel.app/"
+    }, {
+        title: "Velevt Pour",
+        year: "'25",
+        tags: ["FRONTEND", "DEV", "UI"],
+        image: "/projects/velevt-pour.png",
+        link: "https://velevt-pour.vercel.app/"
+    }, {
+        title: "Anera Foods",
+        year: "'2024",
+        tags: ["E-COMMERCE", "DEV", "UI"],
+        image: "/projects/anera-foods.png",
+        link: "https://anera-foods.vercel.app/"
+    }, {
+        title: "Dilru Crochet",
+        year: "'2024",
+        tags: ["E-COMMERCE", "DEV", "UI"],
+        image: "/projects/dilru-crochet.png",
+        link: "https://dilru-crochet.vercel.app/"
+    }];
 const cardBackgrounds = ['bg-[#121212]', // Card 1: Deep Dark Charcoal
     'bg-[#222222]', // Card 2: Neutral Dark Grey
     'bg-[#363636]', // Card 3: Medium-Dark Grey
